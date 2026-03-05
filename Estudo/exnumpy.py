@@ -9,7 +9,7 @@ arr = temp[filtro]
 
 clear = np.where(temp > 50, (np.mean(arr)), temp)
 
-norm = np.min(clear) / (np.max(clear) - np.min(clear))
+norm = (clear - np.min(clear)) / (np.max(clear) - np.min(clear))
 
 print(f"""Análise: {temp}
 Filtrado: {arr}
