@@ -6,10 +6,9 @@ import xml.etree.ElementTree as et
 
 
 
-def xmlscrap(nprog):
+def checkout(nprog):
 
     #tratamento de str (bugs por conta de "\" no caminho)
-    nprog = str(nprog)
     file = str(r"\\jacvmprdft02\program$\3030\\")
     file = file[:-1]
 
@@ -31,7 +30,15 @@ def xmlscrap(nprog):
         except Except as e:
             erro = type(e).__name__
             return f"Erro: {e}"
+
+    scrap(root)
+
+
+def scrap(root):
+    dms = root.findall(".//PartoNo")
+
+
         
 
 
-n = xmlscrap("15413079")
+n = checkout(str("15413079"))
