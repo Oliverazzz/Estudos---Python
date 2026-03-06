@@ -21,7 +21,17 @@ def xmlscrap(nprog):
         nprog = "L" + nprog
     prog = str(file.strip() + nprog + ".xml")
     
-    if not os.path.exists
+    if not os.path.exists(prog):
+        return "Programa não existe"
+    else:
+        try:
+            tree = et.parse(prog, parser="etree")
+            root = tree.getroot()
+            return root
+        except Except as e:
+            erro = type(e).__name__
+            return f"Erro: {e}"
+        
 
 
 n = xmlscrap("15413079")
