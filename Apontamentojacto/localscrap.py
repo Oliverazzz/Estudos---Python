@@ -48,9 +48,11 @@ def scrap(root): #scrap no xml (Dms, ordens, blank minimo, material, dimensão p
 
         #a modificar
         lastindex = 0 
-        orderindex = order.find(",")
-        orderunit = order[lastindex:orderindex]
-        lastindex = orderindex + 1
+        count = order.count(",")
+        for a in range (0, (count + 1)):
+            orderindex = order.find(lastindex, ",")
+            orderunit = order[lastindex:orderindex]
+            lastindex = orderindex + 1
         
         
 
