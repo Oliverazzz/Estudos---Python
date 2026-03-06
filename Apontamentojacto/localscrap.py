@@ -30,7 +30,8 @@ def checkout(nprog):
             erro = type(e).__name__
             return f"Erro: {e}"
 
-    scrap(root)
+    response = scrap(root)
+    return response
 
 
 def scrap(root): #scrap no xml (Dms, ordens, blank minimo, material, dimensão por peça)
@@ -56,17 +57,14 @@ def scrap(root): #scrap no xml (Dms, ordens, blank minimo, material, dimensão p
                 order1 = order[lastindex:orderindex].strip()
                 lastindex = orderindex + 1
                 orderunit.append(order1) 
-            else:
+        else:
                 order1 = [lastindex:]
                 orderunit.append(order1)
-
-    blankall = 
+        listorders.append(orderunit)
+            
+    return orderunit, listdms 
                 
         
-        
+    
 
-
-        
-
-
-n = checkout(str("15413079"))
+n = checkout(str("13131"))
