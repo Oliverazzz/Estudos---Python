@@ -34,6 +34,8 @@ def checkout(nprog):
 
 
 def scrap(root): #scrap no xml (Dms, ordens, blank minimo, material, dimensão por peça)
+
+    
     dmsall = root.findall(".//PartoNo") #encontra todos os DMS das peças
     listdms = []
     for dms in dmsall:                  #Formarta os DMS
@@ -41,18 +43,25 @@ def scrap(root): #scrap no xml (Dms, ordens, blank minimo, material, dimensão p
         dms = dms[indexdms:]
         listdms.append(dms)
 
+    
     orderall = root.findall(".//CustomerName") #encontra todas as ordens das peças
     listorders = []
     for order in orderall:
-
-
-        #a modificar
         lastindex = 0 
         count = order.count(",")
+        orderunit = []
         for a in range (0, (count + 1)):
-            orderindex = order.find(lastindex, ",")
-            orderunit = order[lastindex:orderindex]
-            lastindex = orderindex + 1
+            if (a <= count):
+                orderindex = order.find(lastindex, ",")
+                order1 = order[lastindex:orderindex].strip()
+                lastindex = orderindex + 1
+                orderunit.append(order1) 
+            else:
+                order1 = [lastindex:]
+                orderunit.append(order1)
+
+    blankall = 
+                
         
         
 
