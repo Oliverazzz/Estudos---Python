@@ -8,7 +8,7 @@ import xml.etree.ElementTree as et
 def checkout(nprog):
 
     # tratamento de str (bugs por conta de "\" no caminho)
-    file = str(r"\\jacvmprdft02\program$\3030\\")
+    file = str(r"C:\Users\luizf\Desktop\.vscode\python\Apontamentojacto\\")
     file = file[:-1]
 
     # 1. uppercase no caractere L no começo da str
@@ -23,16 +23,12 @@ def checkout(nprog):
         return "Programa não existe"
     else:
         try:
-            tree = et.parse(prog, parser="etree")
+            tree = et.parse(prog)
             root = tree.getroot()
-            return root
-        except Except as e:
+        except Exception as e:
             erro = type(e).__name__
             return f"Erro: {e}"
-
-    response = scrap(root)
-    return response
-
+    return root
 
 def scrap(root):  # scrap no xml (Dms, ordens, blank minimo, material, dimensão por peça)
 
@@ -63,7 +59,9 @@ def scrap(root):  # scrap no xml (Dms, ordens, blank minimo, material, dimensão
             orderunit.append(order1)
         listorders.append(orderunit)
 
-    return orderunit, listdms
+    return listorders, listdms
 
 
-n = checkout("13131")
+n = checkout("12257")
+response = scrap(n)
+print(response)
