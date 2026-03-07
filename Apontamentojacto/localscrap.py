@@ -37,7 +37,7 @@ def scrap(root):  # scrap no xml (Dms, ordens, blank minimo, material, dimensão
     for dms in dmsall:
         dms = dms.text  # Formarta os DMS
         indexdms = dms.find("-")
-        dms = dms[indexdms:]
+        dms = dms[(indexdms + 1):]
         listdms.append(dms)
 
     # encontra todas as ordens das peças
@@ -59,7 +59,17 @@ def scrap(root):  # scrap no xml (Dms, ordens, blank minimo, material, dimensão
             orderunit.append(order1)
         listorders.append(orderunit)
 
-    return listorders, listdms
+
+        #Blank minimo
+        blankminx = root.findall(".//MinimumSheetSizeInX")
+        blankminy = root.findall(".//MinimumSheetSizeIny")
+        print(blankminx[1].text)
+        #blankminimo = [(x.text, y.text) for x, y in zip(blankminx, blankminy)]
+
+
+
+
+    #return blankminimo
 
 
 n = checkout("12257")
