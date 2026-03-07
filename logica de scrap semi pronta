@@ -1,0 +1,104 @@
+[33mcommit c20125eb6340b1d063cbeb098c9091ca1ed94fbc[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mteste[m[33m, [m[1;31morigin/teste[m[33m)[m
+Merge: c1ffff6 009c333
+Author: Luiz Oliveira <luizfoliveirah@gmail.com>
+Date:   Sat Mar 7 00:27:02 2026 -0300
+
+    logica de scrap semi pronta
+
+[33mcommit 009c3339bd17283ad7cefbcae8c8f22e4c52ddfb[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Oliverazzz <luizfoliveirah@gmail.com>
+Date:   Fri Mar 6 16:01:22 2026 -0300
+
+    Refactor checkout and scrap functions
+    
+    Fix response handling in checkout function and adjust order processing logic.
+
+[33mcommit 0e5fc9c3732b3af5534b933149a77b243a9c63f8[m
+Author: Oliverazzz <luizfoliveirah@gmail.com>
+Date:   Fri Mar 6 15:28:27 2026 -0300
+
+    Improve order extraction in scrap function
+    
+    Refactor order processing logic in scrap function.
+
+[33mcommit 118c02246d85fd46af76789a9399e1a02eed9ce4[m
+Author: Oliverazzz <luizfoliveirah@gmail.com>
+Date:   Fri Mar 6 15:14:12 2026 -0300
+
+    Update order parsing in localscrap.py
+    
+    Fix order parsing logic to handle multiple units correctly.
+
+[33mcommit f23d7271a5c0a1720594874b930028b65531f5e2[m
+Author: Oliverazzz <luizfoliveirah@gmail.com>
+Date:   Fri Mar 6 14:13:03 2026 -0300
+
+    Enhance scrap function for XML data extraction
+    
+    Refactor scrap function to process DMS and orders from XML.
+
+[33mcommit 432b5ca42b46e76b8e87b89406d8f984d9ebf6b4[m
+Author: Oliverazzz <luizfoliveirah@gmail.com>
+Date:   Fri Mar 6 13:37:03 2026 -0300
+
+    Rename xmlscrap function to checkout
+
+[33mcommit dd0f6126452f2a4e5086afde0dbde6e63c17d390[m
+Author: Oliverazzz <luizfoliveirah@gmail.com>
+Date:   Fri Mar 6 11:16:45 2026 -0300
+
+    Fix file existence check and error handling
+
+[33mcommit c1ffff6e8ed21bc6377c783bd4406615d9430952[m
+Author: Luiz Oliveira <luizfoliveirah@gmail.com>
+Date:   Thu Mar 5 21:00:45 2026 -0300
+
+    cheio de erro
+
+[33mcommit db5b4c3ee7cb7bf379c29f41b6ad3549da7fe71e[m[33m ([m[1;32mmain[m[33m)[m
+Author: Luiz Oliveira <luizfoliveirah@gmail.com>
+Date:   Thu Mar 5 20:21:47 2026 -0300
+
+    leitura xml
+
+[33mcommit def27165446bcf16f3121ecb4306b9e573c3663b[m
+Author: Luiz Oliveira <luizfoliveirah@gmail.com>
+Date:   Thu Mar 5 20:10:15 2026 -0300
+
+    Caminho arquivos boost formatado
+
+[33mcommit 0f0c517b0d266ddf9f5cdd95c6fdea8613425289[m
+Author: Luiz Oliveira <luizfoliveirah@gmail.com>
+Date:   Tue Mar 3 00:02:48 2026 -0300
+
+    exercicio semi concluido
+
+[33mcommit 2927022d24e169c3c24ad089123e988915909c2d[m
+Author: Luiz Oliveira <luizfoliveirah@gmail.com>
+Date:   Mon Mar 2 23:40:07 2026 -0300
+
+    exercicio concluido
+
+[33mcommit e1c1694e87949fb51766c33f95aeb6242cf097e8[m
+Author: Luiz Oliveira <luizfoliveirah@gmail.com>
+Date:   Mon Mar 2 23:14:31 2026 -0300
+
+    exercicio concluido
+
+[33mcommit 03f49a8a74a7fa641ae673115a3b4706f226d0fe[m
+Author: Luiz Oliveira <luizfoliveirah@gmail.com>
+Date:   Sun Feb 22 21:00:26 2026 -0300
+
+    inicial
+
+[33mcommit fc60d33a2ac286618dbc216678083be5e5ef6c1f[m
+Author: Luiz Oliveira <luizfoliveirah@gmail.com>
+Date:   Sun Feb 22 20:57:51 2026 -0300
+
+    removi tudo
+
+[33mcommit 4aece512bc2f2885f913331af6956a99359e5db8[m
+Author: Luiz Oliveira <luizfoliveirah@gmail.com>
+Date:   Sun Feb 22 20:33:55 2026 -0300
+
+    salvar

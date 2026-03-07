@@ -39,17 +39,26 @@ def scrap(root): #scrap no xml (Dms, ordens, blank minimo, material, dimensão p
     
     dmsall = root.findall(".//PartoNo") #encontra todos os DMS das peças
     listdms = []
+<<<<<<< HEAD
     for dms in dmsall: 
         dms = dms.text                 #Formarta os DMS
         indexdms = dms.find("-")
         dms = dms[(indexdms + 1):]
+=======
+    for dms in dmsall:                  #Formarta os DMS
+        indexdms = dms.find("-")
+        dms = dms[indexdms:]
+>>>>>>> 009c3339bd17283ad7cefbcae8c8f22e4c52ddfb
         listdms.append(dms)
 
     
     orderall = root.findall(".//CustomerName") #encontra todas as ordens das peças
     listorders = []
     for order in orderall:
+<<<<<<< HEAD
         order = order.text
+=======
+>>>>>>> 009c3339bd17283ad7cefbcae8c8f22e4c52ddfb
         lastindex = 0 
         count = order.count(",")
         orderunit = []
@@ -69,4 +78,8 @@ def scrap(root): #scrap no xml (Dms, ordens, blank minimo, material, dimensão p
         
     
 
+<<<<<<< HEAD
 n = checkout(str("13131"))
+=======
+n = checkout(str("13131"))
+>>>>>>> 009c3339bd17283ad7cefbcae8c8f22e4c52ddfb
