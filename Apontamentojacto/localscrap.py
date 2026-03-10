@@ -30,6 +30,7 @@ def checkout(nprog):
             return f"Erro: {e}"
     return root
 
+
 def scrap(root):  # scrap no xml (Dms, ordens, blank minimo, material, dimensão por peça)
 
     dmsall = root.findall(".//PartoNo")  # encontra todos os DMS das peças
@@ -59,19 +60,15 @@ def scrap(root):  # scrap no xml (Dms, ordens, blank minimo, material, dimensão
             orderunit.append(order1)
         listorders.append(orderunit)
 
-
-        #Blank minimo
-        blankminx = root.findall(".//MinimumSheetSizeInX")
-        blankminy = root.findall(".//MinimumSheetSizeIny")
-        print(blankminx[1].text)
-        #blankminimo = [(x.text, y.text) for x, y in zip(blankminx, blankminy)]
-
-
+        # Blank minimo
+    blankminx = root.findall(".//MinimumSheetSizeInX")
+    blankminy = root.findall(".//MinimumSheetSizeIny")
+    for i in blankminx:
+        print(i.text)
+    # blankminimo = [(x.text, y.text) for x, y in zip(blankminx, blankminy)]
 
 
-    #return blankminimo
-
-
+    # return blankminimo
 n = checkout("12257")
 response = scrap(n)
 print(response)
