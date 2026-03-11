@@ -33,6 +33,7 @@ def checkout(nprog):
 
 def scrap(root):  # scrap no xml (Dms, ordens, blank minimo, material, dimensão por peça)
 
+    #Encontra todos os DMS
     dmsall = root.findall(".//PartoNo")  # encontra todos os DMS das peças
     listdms = []
     for dms in dmsall:
@@ -41,6 +42,7 @@ def scrap(root):  # scrap no xml (Dms, ordens, blank minimo, material, dimensão
         dms = dms[(indexdms + 1):]
         listdms.append(dms)
 
+    
     #Encontra todas as ordens das peças
     orderall = root.findall(".//CustomerName")
     listorders = []
@@ -60,17 +62,31 @@ def scrap(root):  # scrap no xml (Dms, ordens, blank minimo, material, dimensão
             orderunit.append(order1)
         listorders.append(orderunit)
 
+    
     # Blank mínimo
     blankx = []
     blanky = []
     blankminx = root.findall(".//MinimumSheetSizeInX")
     blankminy = root.findall(".//MinimumSheetSizeIny")
-    i.stripe().text for i in blankminx if i not None:
-        blankx.append(i)
-    i.stripe().text for i in blankminy if i not None:
-        blanky.append(i)
+    blankx = [i.stripe().text for i in blankminx if i not None]
+    blanky = [i.stripe().text for i in blankminy if i not None]
     blankzip = zip(blankx, blanky)
 
+
+    #Dimensões por peça
+    dporpeca = []
+    l = root.findall(".//Length")
+    w = root.findall(".//Width")
+    for lenght, width in zip_longest(l, w, fillvalue=None)
+        dp = {
+            "Length":lenght,
+            "Width":width
+        }
+        dporpeca.append(dp) if not None
+    
+    
+
+    
     #Material
     material = root.find(".//DrawingNo")
     material = material.text.strip() if material else return "Erro: código de material não encontrado"
