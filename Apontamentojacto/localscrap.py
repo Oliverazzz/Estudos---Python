@@ -71,6 +71,11 @@ def scrap(root):  # scrap no xml (Dms, ordens, blank minimo, material, dimensão
         blanky.append(i)
     blankzip = zip(blankx, blanky)
 
+    #Material
+    material = root.find(".//DrawingNo")
+    material = material.text.strip() if material else return "Erro: código de material não encontrado"
+    
+
 
    
 n = checkout("12257")
