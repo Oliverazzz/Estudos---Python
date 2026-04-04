@@ -1,0 +1,433 @@
+<?xml version="1.0"?>
+<ProductionPackage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" JobName="L12257">
+  <Barcode>1200012400</Barcode>
+  <DueDate>31.12.5000 23:59:59</DueDate>
+  <BasicMaterial>1.0038</BasicMaterial>
+  <BasicMaterialGroup>Steel</BasicMaterialGroup>
+  <RawMaterial>St37-50</RawMaterial>
+  <RawMaterialThicknessUnit>mm</RawMaterialThicknessUnit>
+  <JobNote />
+  <CreatedBy>SV_JACTO100</CreatedBy>
+  <ChangedBy>SV_JACTO100</ChangedBy>
+  <Workplace WorkplaceName="TruLaser (L20)">
+    <Barcode>0800000029</Barcode>
+    <CostCenter />
+    <Activity>2D-Tafelbearbeitung</Activity>
+    <MachineName>L20</MachineName>
+    <MachineType>51</MachineType>
+    <ControlName>Sin 840D</ControlName>
+    <ControlType>1</ControlType>
+    <ProcessingAreaX>3000.00</ProcessingAreaX>
+    <ProcessingAreaY>1500.00</ProcessingAreaY>
+    <ProcessingAreaZ>115.00</ProcessingAreaZ>
+  </Workplace>
+  <ManufacturingOrders>
+    <TcBoManufacturingOrder ManufacturingOrderNo="L12257_1">
+      <Barcode>1100021123</Barcode>
+      <ProgramNo>L12257_1</ProgramNo>
+      <NoOfRuns>1</NoOfRuns>
+      <ProductionOrders>
+        <Order ProductionOrderNo="OR38747">
+          <PartoNo>8522-0012457303</PartoNo>
+          <PartInProgramPosSequenceIds>
+            <PartInProgramPosSequenceId>1</PartInProgramPosSequenceId>
+            <PartInProgramPosSequenceId>2</PartInProgramPosSequenceId>
+            <PartInProgramPosSequenceId>3</PartInProgramPosSequenceId>
+            <PartInProgramPosSequenceId>4</PartInProgramPosSequenceId>
+          </PartInProgramPosSequenceIds>
+          <TotalDesiredQuantity>1</TotalDesiredQuantity>
+          <TotalQuantityInManufacturingOrder>4</TotalQuantityInManufacturingOrder>
+        </Order>
+        <Order ProductionOrderNo="OR38748">
+          <PartoNo>8522-0011460662</PartoNo>
+          <PartInProgramPosSequenceIds>
+            <PartInProgramPosSequenceId>5</PartInProgramPosSequenceId>
+            <PartInProgramPosSequenceId>6</PartInProgramPosSequenceId>
+            <PartInProgramPosSequenceId>7</PartInProgramPosSequenceId>
+            <PartInProgramPosSequenceId>8</PartInProgramPosSequenceId>
+          </PartInProgramPosSequenceIds>
+          <TotalDesiredQuantity>1</TotalDesiredQuantity>
+          <TotalQuantityInManufacturingOrder>4</TotalQuantityInManufacturingOrder>
+        </Order>
+        <Order ProductionOrderNo="OR38749">
+          <PartoNo>8519-0007899662</PartoNo>
+          <PartInProgramPosSequenceIds>
+            <PartInProgramPosSequenceId>9</PartInProgramPosSequenceId>
+          </PartInProgramPosSequenceIds>
+          <TotalDesiredQuantity>1</TotalDesiredQuantity>
+          <TotalQuantityInManufacturingOrder>1</TotalQuantityInManufacturingOrder>
+        </Order>
+      </ProductionOrders>
+      <ProcessingTimeTotal>8.47</ProcessingTimeTotal>
+    </TcBoManufacturingOrder>
+  </ManufacturingOrders>
+  <ProductionOrders>
+    <ProductionOrder ProductionOrderNo="OR38747">
+      <OrderBarcode>1900038747</OrderBarcode>
+      <OperationNo>0020</OperationNo>
+      <PartoNo>8522-0012457303</PartoNo>
+      <CustomerName> 202322655, 202322660, 202322663, 202322664</CustomerName>
+      <CustomerNo>C1154</CustomerNo>
+      <CustomerOrderNo />
+      <CustomerBookingNo />
+      <DataExt />
+      <OrderNoExt />
+      <DueDate>31.12.5000 23:59:59</DueDate>
+      <Assembly />
+      <CollectiveOrder />
+      <OrderCategory />
+      <Categorie />
+      <OperationBarcode>0100135511</OperationBarcode>
+      <SubsequentOperation>
+        <SubsequentOperationNo>0030</SubsequentOperationNo>
+        <SubsequentActivity>Teilevereinzelung</SubsequentActivity>
+        <SubsequentWorkplace>Teilevereinzelung-1</SubsequentWorkplace>
+        <SubsequentCostCenter />
+      </SubsequentOperation>
+      <TotalDesiredQuantity>1</TotalDesiredQuantity>
+      <TotalQuantityInJob>4</TotalQuantityInJob>
+    </ProductionOrder>
+    <ProductionOrder ProductionOrderNo="OR38748">
+      <OrderBarcode>1900038748</OrderBarcode>
+      <OperationNo>0020</OperationNo>
+      <PartoNo>8522-0011460662</PartoNo>
+      <CustomerName> 202322655, 202322660, 202322663, 202322664</CustomerName>
+      <CustomerNo>C1154</CustomerNo>
+      <CustomerOrderNo />
+      <CustomerBookingNo />
+      <DataExt />
+      <OrderNoExt />
+      <DueDate>31.12.5000 23:59:59</DueDate>
+      <Assembly />
+      <CollectiveOrder />
+      <OrderCategory />
+      <Categorie />
+      <OperationBarcode>0100135514</OperationBarcode>
+      <SubsequentOperation>
+        <SubsequentOperationNo>0030</SubsequentOperationNo>
+        <SubsequentActivity>Teilevereinzelung</SubsequentActivity>
+        <SubsequentWorkplace>Teilevereinzelung-1</SubsequentWorkplace>
+        <SubsequentCostCenter />
+      </SubsequentOperation>
+      <TotalDesiredQuantity>1</TotalDesiredQuantity>
+      <TotalQuantityInJob>4</TotalQuantityInJob>
+    </ProductionOrder>
+    <ProductionOrder ProductionOrderNo="OR38749">
+      <OrderBarcode>1900038749</OrderBarcode>
+      <OperationNo>0020</OperationNo>
+      <PartoNo>8519-0007899662</PartoNo>
+      <CustomerName> 202322655, 202322660, 202322663, 202322664</CustomerName>
+      <CustomerNo>C1154</CustomerNo>
+      <CustomerOrderNo />
+      <CustomerBookingNo />
+      <DataExt />
+      <OrderNoExt />
+      <DueDate>31.12.5000 23:59:59</DueDate>
+      <Assembly />
+      <CollectiveOrder />
+      <OrderCategory />
+      <Categorie />
+      <OperationBarcode>0100135517</OperationBarcode>
+      <SubsequentOperation>
+        <SubsequentOperationNo>0030</SubsequentOperationNo>
+        <SubsequentActivity>Teilevereinzelung</SubsequentActivity>
+        <SubsequentWorkplace>Teilevereinzelung-1</SubsequentWorkplace>
+        <SubsequentCostCenter />
+      </SubsequentOperation>
+      <TotalDesiredQuantity>1</TotalDesiredQuantity>
+      <TotalQuantityInJob>1</TotalQuantityInJob>
+    </ProductionOrder>
+  </ProductionOrders>
+  <Parts>
+    <Part PartNo="8522-0012457303">
+      <Barcode>0300039474</Barcode>
+      <BasicMaterial>1.0038</BasicMaterial>
+      <RawMaterial>St37-50</RawMaterial>
+      <PartNoExt />
+      <Description>8522-0012457303</Description>
+      <DrawingNo>910007473</DrawingNo>
+      <AreaUnit>m2</AreaUnit>
+      <CadFilePath>Artikel\39400\39474</CadFilePath>
+      <CadFileName>8522-0012457303.geo</CadFileName>
+      <ImageFilePath>Artikel\39400\39474</ImageFilePath>
+      <ImageFileName>FabGenerated_39474.jpg</ImageFileName>
+      <WeightUnit>kg</WeightUnit>
+      <TotalQuantityInJob>4</TotalQuantityInJob>
+      <CuttingLengthPartUnit>mm</CuttingLengthPartUnit>
+      <Dimensions>
+        <Unit>mm</Unit>
+        <Length>1220.000</Length>
+        <Width>64.870</Width>
+        <Thickness>5.000</Thickness>
+      </Dimensions>
+      <Area>0.080</Area>
+      <Weight>3.040</Weight>
+      <TargetProcessingTimePerPiece>1.140</TargetProcessingTimePerPiece>
+      <CuttingLengthPart>3043.970</CuttingLengthPart>
+    </Part>
+    <Part PartNo="8522-0011460662">
+      <Barcode>0300039475</Barcode>
+      <BasicMaterial>1.0038</BasicMaterial>
+      <RawMaterial>St37-50</RawMaterial>
+      <PartNoExt />
+      <Description>8522-0011460662</Description>
+      <DrawingNo>910007473</DrawingNo>
+      <AreaUnit>m2</AreaUnit>
+      <CadFilePath>Artikel\39400\39475</CadFilePath>
+      <CadFileName>8522-0011460662.geo</CadFileName>
+      <ImageFilePath>Artikel\39400\39475</ImageFilePath>
+      <ImageFileName>FabGenerated_39475.jpg</ImageFileName>
+      <WeightUnit>kg</WeightUnit>
+      <TotalQuantityInJob>4</TotalQuantityInJob>
+      <CuttingLengthPartUnit>mm</CuttingLengthPartUnit>
+      <Dimensions>
+        <Unit>mm</Unit>
+        <Length>289.040</Length>
+        <Width>453.890</Width>
+        <Thickness>5.000</Thickness>
+      </Dimensions>
+      <Area>0.080</Area>
+      <Weight>3.280</Weight>
+      <TargetProcessingTimePerPiece>0.760</TargetProcessingTimePerPiece>
+      <CuttingLengthPart>2103.500</CuttingLengthPart>
+    </Part>
+    <Part PartNo="8519-0007899662">
+      <Barcode>0300039476</Barcode>
+      <BasicMaterial>1.0038</BasicMaterial>
+      <RawMaterial>St37-50</RawMaterial>
+      <PartNoExt />
+      <Description>8519-0007899662</Description>
+      <DrawingNo>910007473</DrawingNo>
+      <AreaUnit>m2</AreaUnit>
+      <CadFilePath>Artikel\39400\39476</CadFilePath>
+      <CadFileName>8519-0007899662.geo</CadFileName>
+      <ImageFilePath>Artikel\39400\39476</ImageFilePath>
+      <ImageFileName>FabGenerated_39476.jpg</ImageFileName>
+      <WeightUnit>kg</WeightUnit>
+      <TotalQuantityInJob>1</TotalQuantityInJob>
+      <CuttingLengthPartUnit>mm</CuttingLengthPartUnit>
+      <Dimensions>
+        <Unit>mm</Unit>
+        <Length>261.000</Length>
+        <Width>327.500</Width>
+        <Thickness>5.000</Thickness>
+      </Dimensions>
+      <Area>0.080</Area>
+      <Weight>3.140</Weight>
+      <TargetProcessingTimePerPiece>0.810</TargetProcessingTimePerPiece>
+      <CuttingLengthPart>1913.810</CuttingLengthPart>
+    </Part>
+  </Parts>
+  <NcPrograms>
+    <NcProgram ProgramNo="L12257_1">
+      <MinimumSheetSizeInX>1225.000</MinimumSheetSizeInX>
+      <MinimumSheetSizeInY>915.960</MinimumSheetSizeInY>
+      <Waste>75.85</Waste>
+      <ProcessingTime>8.47</ProcessingTime>
+      <TotalNoOfRuns>1</TotalNoOfRuns>
+      <CuttingLengthSheet>22503.670</CuttingLengthSheet>
+      <CuttingLengthSheetUnit>mm</CuttingLengthSheetUnit>
+      <Sheet>ST0M0500----2500x1200</Sheet>
+      <ProductionInstructions>
+        <ClampPositions />
+        <LiftSetupInformation />
+        <DistanceOfSlats>67 mm</DistanceOfSlats>
+        <SlatOccupationName>Máquina standard, cada segundo colocado</SlatOccupationName>
+        <DistanceOfSlatSupportPoints>38 mm</DistanceOfSlatSupportPoints>
+        <ProcessingFirst>sem</ProcessingFirst>
+        <MicrojointChangeable>não colocados</MicrojointChangeable>
+        <KerfCorrection />
+        <SheetBackguage>0</SheetBackguage>
+        <Notices />
+        <PalletizingFlag>0</PalletizingFlag>
+        <PalletizingMode>NEU_PALETTIERT</PalletizingMode>
+        <StopPin />
+        <LoadingPositionX>0.000</LoadingPositionX>
+        <LoadingPositionY>0.000</LoadingPositionY>
+      </ProductionInstructions>
+      <LaserTechnoTables>
+        <LaserTechnoTableNc TableNo="ST050MD0-O2S0-30-2" />
+      </LaserTechnoTables>
+      <UsedLaserTechnoTables>
+        <UsedLaserTechnoTable>
+          <TableNo>ST050MD0-O2S0-30-2</TableNo>
+          <PiercingType>NORMAL</PiercingType>
+          <CuttingType>NORMAL</CuttingType>
+          <CountourType>GRANDE</CountourType>
+        </UsedLaserTechnoTable>
+      </UsedLaserTechnoTables>
+      <PartsInProgram>
+        <PartInProgram PartoNo="8522-0012457303">
+          <TopsPartNo>1</TopsPartNo>
+          <PiercingPoints>11</PiercingPoints>
+          <QuantityOnSheet>4</QuantityOnSheet>
+        </PartInProgram>
+        <PartInProgram PartoNo="8522-0011460662">
+          <TopsPartNo>3</TopsPartNo>
+          <PiercingPoints>6</PiercingPoints>
+          <QuantityOnSheet>4</QuantityOnSheet>
+        </PartInProgram>
+        <PartInProgram PartoNo="8519-0007899662">
+          <TopsPartNo>2</TopsPartNo>
+          <PiercingPoints>15</PiercingPoints>
+          <QuantityOnSheet>1</QuantityOnSheet>
+        </PartInProgram>
+      </PartsInProgram>
+      <PartsInProgramPos>
+        <PartInProgramPos SequenceId="1">
+          <PartNo>8522-0012457303</PartNo>
+          <Position>
+            <MirroredAtY>0</MirroredAtY>
+            <Unit>mm</Unit>
+            <PositionX>5.000</PositionX>
+            <PositionY>5.000</PositionY>
+            <PositionXCenterOfGravity>614.710</PositionXCenterOfGravity>
+            <PositionYCenterOfGravity>37.560</PositionYCenterOfGravity>
+            <Angle>0.000</Angle>
+          </Position>
+        </PartInProgramPos>
+        <PartInProgramPos SequenceId="2">
+          <PartNo>8522-0012457303</PartNo>
+          <Position>
+            <MirroredAtY>0</MirroredAtY>
+            <Unit>mm</Unit>
+            <PositionX>5.000</PositionX>
+            <PositionY>84.550</PositionY>
+            <PositionXCenterOfGravity>614.710</PositionXCenterOfGravity>
+            <PositionYCenterOfGravity>117.110</PositionYCenterOfGravity>
+            <Angle>0.000</Angle>
+          </Position>
+        </PartInProgramPos>
+        <PartInProgramPos SequenceId="3">
+          <PartNo>8522-0012457303</PartNo>
+          <Position>
+            <MirroredAtY>0</MirroredAtY>
+            <Unit>mm</Unit>
+            <PositionX>5.000</PositionX>
+            <PositionY>164.100</PositionY>
+            <PositionXCenterOfGravity>614.710</PositionXCenterOfGravity>
+            <PositionYCenterOfGravity>196.660</PositionYCenterOfGravity>
+            <Angle>0.000</Angle>
+          </Position>
+        </PartInProgramPos>
+        <PartInProgramPos SequenceId="4">
+          <PartNo>8522-0012457303</PartNo>
+          <Position>
+            <MirroredAtY>0</MirroredAtY>
+            <Unit>mm</Unit>
+            <PositionX>5.000</PositionX>
+            <PositionY>243.650</PositionY>
+            <PositionXCenterOfGravity>614.710</PositionXCenterOfGravity>
+            <PositionYCenterOfGravity>276.210</PositionYCenterOfGravity>
+            <Angle>0.000</Angle>
+          </Position>
+        </PartInProgramPos>
+        <PartInProgramPos SequenceId="5">
+          <PartNo>8522-0011460662</PartNo>
+          <Position>
+            <MirroredAtY>0</MirroredAtY>
+            <Unit>mm</Unit>
+            <PositionX>5.020</PositionX>
+            <PositionY>626.920</PositionY>
+            <PositionXCenterOfGravity>222.900</PositionXCenterOfGravity>
+            <PositionYCenterOfGravity>778.510</PositionYCenterOfGravity>
+            <Angle>90.000</Angle>
+          </Position>
+        </PartInProgramPos>
+        <PartInProgramPos SequenceId="6">
+          <PartNo>8522-0011460662</PartNo>
+          <Position>
+            <MirroredAtY>0</MirroredAtY>
+            <Unit>mm</Unit>
+            <PositionX>5.010</PositionX>
+            <PositionY>323.200</PositionY>
+            <PositionXCenterOfGravity>241.020</PositionXCenterOfGravity>
+            <PositionYCenterOfGravity>460.640</PositionYCenterOfGravity>
+            <Angle>270.000</Angle>
+          </Position>
+        </PartInProgramPos>
+        <PartInProgramPos SequenceId="7">
+          <PartNo>8522-0011460662</PartNo>
+          <Position>
+            <MirroredAtY>0</MirroredAtY>
+            <Unit>mm</Unit>
+            <PositionX>411.620</PositionX>
+            <PositionY>323.200</PositionY>
+            <PositionXCenterOfGravity>629.500</PositionXCenterOfGravity>
+            <PositionYCenterOfGravity>474.800</PositionYCenterOfGravity>
+            <Angle>90.000</Angle>
+          </Position>
+        </PartInProgramPos>
+        <PartInProgramPos SequenceId="8">
+          <PartNo>8522-0011460662</PartNo>
+          <Position>
+            <MirroredAtY>0</MirroredAtY>
+            <Unit>mm</Unit>
+            <PositionX>444.860</PositionX>
+            <PositionY>626.920</PositionY>
+            <PositionXCenterOfGravity>662.740</PositionXCenterOfGravity>
+            <PositionYCenterOfGravity>778.510</PositionYCenterOfGravity>
+            <Angle>90.000</Angle>
+          </Position>
+        </PartInProgramPos>
+        <PartInProgramPos SequenceId="9">
+          <PartNo>8519-0007899662</PartNo>
+          <Position>
+            <MirroredAtY>0</MirroredAtY>
+            <Unit>mm</Unit>
+            <PositionX>880.200</PositionX>
+            <PositionY>323.200</PositionY>
+            <PositionXCenterOfGravity>1046.630</PositionXCenterOfGravity>
+            <PositionYCenterOfGravity>455.800</PositionYCenterOfGravity>
+            <Angle>90.000</Angle>
+          </Position>
+        </PartInProgramPos>
+      </PartsInProgramPos>
+    </NcProgram>
+  </NcPrograms>
+  <RequiredSheets>
+    <Sheet SheetIdentNo="ST0M0500----2500x1200">
+      <Barcode>0300022312</Barcode>
+      <BasicMaterial>1.0038</BasicMaterial>
+      <BasicMaterialGroup>Steel</BasicMaterialGroup>
+      <RawMaterial>St37-50</RawMaterial>
+      <SheetWeightUnit>kg</SheetWeightUnit>
+      <TotalQuantityInJob>1</TotalQuantityInJob>
+      <Dimensions>
+        <Unit>mm</Unit>
+        <Length>2500.000</Length>
+        <Width>1200.000</Width>
+        <Thickness>5.000</Thickness>
+      </Dimensions>
+      <SheetWeight>117.750</SheetWeight>
+    </Sheet>
+  </RequiredSheets>
+  <LaserTechnoTables>
+    <LaserTechnoTable TableNo="ST050MD0-O2S0-30-2">
+      <MaxLaserPower>3200</MaxLaserPower>
+      <Gas>1</Gas>
+      <Processing1>-1</Processing1>
+      <Processing2>-1</Processing2>
+      <Rule />
+      <RuleInfo />
+      <RuleType>1</RuleType>
+      <Kerf>0.340</Kerf>
+      <LensFocalLength>9.800</LensFocalLength>
+      <NozzleDiameter>0.000</NozzleDiameter>
+      <SettingDimension>1.000</SettingDimension>
+    </LaserTechnoTable>
+  </LaserTechnoTables>
+  <UsedLaserTechnoTables>
+    <UsedLaserTechnoTable>
+      <TableNo>ST050MD0-O2S0-30-2</TableNo>
+      <PiercingType>NORMAL</PiercingType>
+      <CuttingType>NORMAL</CuttingType>
+      <CountourType>GRANDE</CountourType>
+    </UsedLaserTechnoTable>
+  </UsedLaserTechnoTables>
+  <TotalRuntime>8.47</TotalRuntime>
+  <RawMaterialThickness>5.000</RawMaterialThickness>
+  <TotalPartCount>9</TotalPartCount>
+  <TotalSheetCount>9</TotalSheetCount>
+  <Waste>75.85</Waste>
+</ProductionPackage>
