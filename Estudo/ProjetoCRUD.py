@@ -67,6 +67,17 @@ class admin:
         self.savefile(self.users, update)
 
 
+    def delete(self):
+         if os.path.getsize("datausers.json") > 0:
+            title = 'Qual usuário quer DELETAR?'
+            users = [(f"ID:{i['id']} | Nome:{i['nome']} | Idade:{i['idade']}") for i in self.users]
+        else:
+            print("\nNão há usuários cadastrados ainda\n")
+            quit()
+
+        user, index = pick(users, title, indicator='>>>', default_index=0)
+
+        
     def savefile(self, dict, method):  #Função própria para salvar no arquivo .json
         try:
             with open("datausers.json", 'w', encoding="Utf-8") as file:
@@ -83,7 +94,7 @@ class admin:
         finally:
             print(f"Erro:{type(e).__name__}\n")
 
-    
+
     def pick(self):
         title = 'Use as setas para selecionar uma opção:'
         options = ['Salvar Usuário', 'Atualizar Usuário',
