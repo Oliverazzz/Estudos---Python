@@ -16,7 +16,7 @@ class admin:
             with open("datausers.json", 'r', encoding="Utf-8") as file:
                 self.users = json.load(file)
 
-    def saveuser(self):
+    def newuser(self):
         print("\n***Salvar usuário***\n")
         nome = input("\nDigite seu nome:\n")
         idade = input("Sua idade:\n")
@@ -75,6 +75,21 @@ class admin:
                 print("\n\n\nOperação cancelada")
                 quit()
 
+
+    def savefile(self, save, method):
+        try:
+            with open("datausers.json", 'w', encoding="Utf-8") as file:
+                json.dump(save, file, indent=4, ensure_ascii=False)
+        except Exception as e:
+            match method:
+                case save:
+                case update:
+                case delete:
+            
+        finally:
+            print(f"Erro:{type(e).__name__}\n")
+
+    
     def pick(self):
         title = 'Use as setas para selecionar uma opção:'
         options = ['Salvar Usuário', 'Atualizar Usuário',
@@ -86,7 +101,7 @@ class admin:
 
         match index:
             case 0:
-                self.saveuser()
+                self.newuser()
             case 1:
                 self.updateuser()
             case 2:
