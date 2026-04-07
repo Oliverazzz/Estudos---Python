@@ -67,7 +67,7 @@ class admin:
         self.savefile(self.users, update)
 
 
-    def delete(self):
+    def delusers(self):
          if os.path.getsize("datausers.json") > 0:
             title = 'Qual usuário quer DELETAR?'
             users = [(f"ID:{i['id']} | Nome:{i['nome']} | Idade:{i['idade']}") for i in self.users]
