@@ -105,19 +105,19 @@ class admin:
         option, index = pick(options, title, indicator='-->', default_index=0)
 
         # print(f"Você escolheu: {option} (Índice {index})")
-
-        match index:
-            case 0:
-                self.newuser()
-            case 1:
-                self.updateuser()
-            case 2:
-                self.listusers()
-            case 3:
-                self.delusers()
-            case 4:
-                print("\n\n\nOperação cancelada")
-                return True
+        if index:
+            match index:
+                case 0:
+                    self.newuser()
+                case 1:
+                    self.updateuser()
+                case 2:
+                    self.listusers()
+                case 3:
+                    self.delusers()
+                case 4:
+                    print("\n\n\nOperação cancelada")
+                    return True
 
 
 admin = admin()
