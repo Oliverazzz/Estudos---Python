@@ -76,6 +76,8 @@ class admin:
             quit()
 
         user, index = pick(users, title, indicator='>>>', default_index=0)
+        self.users.pop(index)
+        self.savefile(self.users, delete)
 
         
     def savefile(self, dict, method):  #Função própria para salvar no arquivo .json
