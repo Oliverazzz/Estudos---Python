@@ -23,7 +23,6 @@ class admin:
 
         #Gera um novo ID com valor crescente em relação ao último usuário cadastrado
         if os.path.getsize("datausers.json") > 0:
-
             id = max(user["id"] for user in self.users) + 1 
         else:
             id = 0
@@ -35,17 +34,8 @@ class admin:
         }
 
         self.users.append(data)
-
-        #Cadatra o novo usuário no arquivo .json
-        try:
-            with open("datausers.json", 'w', encoding="Utf-8") as file:
-                json.dump(self.users, file, indent=4, ensure_ascii=False)
-        except Exception as e:
-            print("Não foi possível cadastrar um novo usuário\n")
-            print(f"Erro:{type(e).__name__}\n")
-        finally:
-            print("\nUsuário cadastrado com sucesso\n")
-
+        self.savefile(self.users, save)
+      
     def updateuser(self):
         if os.path.getsize("datausers.json") > 0:
             title = 'Qual usuário quer mudar?'
@@ -74,18 +64,22 @@ class admin:
             case 2:
                 print("\n\n\nOperação cancelada")
                 quit()
+        self.savefile(self.users, update)
 
 
-    def savefile(self, save, method):
+    def savefile(self, dict, method):  #Função própria para salvar no arquivo .json
         try:
             with open("datausers.json", 'w', encoding="Utf-8") as file:
                 json.dump(save, file, indent=4, ensure_ascii=False)
+                print("Ateração salva")
         except Exception as e:
             match method:
                 case save:
+                    print("\n\n\nNão foi possível salvar novo usuário")
                 case update:
+                    print("\n\n\nNão foi possível atualizar usuário")
                 case delete:
-            
+                    print("\n\n\nNão foi possível deletar usuário")
         finally:
             print(f"Erro:{type(e).__name__}\n")
 
