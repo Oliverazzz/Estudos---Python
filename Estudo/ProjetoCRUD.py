@@ -1,10 +1,9 @@
 import os
 import json
 from pick import pick
-import numpy as np
+import time
 
-
-class admin:
+class Admin:
     def __init__(self):
         self.users = []
 
@@ -16,14 +15,13 @@ class admin:
             with open("datausers.json", 'r', encoding="Utf-8") as file:
                 self.users = json.load(file)
 
-    def saveuser(self):
+    def newuser(self):
         print("\n***Salvar usuário***\n")
         nome = input("\nDigite seu nome:\n")
         idade = input("Sua idade:\n")
 
         #Gera um novo ID com valor crescente em relação ao último usuário cadastrado
         if os.path.getsize("datausers.json") > 0:
-
             id = max(user["id"] for user in self.users) + 1 
         else:
             id = 0
@@ -35,17 +33,8 @@ class admin:
         }
 
         self.users.append(data)
-
-        #Cadatra o novo usuário no arquivo .json
-        try:
-            with open("datausers.json", 'w', encoding="Utf-8") as file:
-                json.dump(self.users, file, indent=4, ensure_ascii=False)
-        except Exception as e:
-            print("Não foi possível cadastrar um novo usuário\n")
-            print(f"Erro:{type(e).__name__}\n")
-        finally:
-            print("\nUsuário cadastrado com sucesso\n")
-
+        self.savefile(self.users, "save")
+      
     def updateuser(self):
         if os.path.getsize("datausers.json") > 0:
             title = 'Qual usuário quer mudar?'
@@ -74,6 +63,49 @@ class admin:
             case 2:
                 print("\n\n\nOperação cancelada")
                 quit()
+        self.savefile(self.users, "update")
+
+
+    def delusers(self):
+        if os.path.getsize("datausers.json") > 0:
+            title = 'Qual usuário quer DELETAR?'
+            users = [(f"ID:{i['id']} | Nome:{i['nome']} | Idade:{i['idade']}") for i in self.users]
+        else:
+            print("\nNão há usuários cadastrados ainda\n")
+            quit()
+
+        user, index = pick(users, title, indicator='>>>', default_index=0)
+        self.users.pop(index)
+        self.savefile(self.users, "delete")
+
+
+
+    def listusers(self):
+        if os.path.exists("datausers.json") and os.path.getsize("datausers.json") > 0:
+            for index, user in enumerate(self.users):
+                print(f"ID:{index} | Nome:{user['nome']} | Idade:{user['idade']}")        
+                input("\nPressione Enter para voltar...")
+        else:
+            print("Ainda nao existem usuários cadastrados")
+            input("\nPressione Enter para voltar...")
+
+    def savefile(self, dict, method):  #Função própria para salvar no arquivo .json
+        try:
+            with open("datausers.json", 'w', encoding="Utf-8") as file:
+                json.dump(dict, file, indent=4, ensure_ascii=False)
+                print("Ateração salva")
+        except Exception as e:
+            match method:
+                case "save":
+                    print("\n\n\nNão foi possível salvar novo usuário")
+                case "update":
+                    print("\n\n\nNão foi possível atualizar usuário")
+                case "delete":
+                    print("\n\n\nNão foi possível deletar usuário")
+            
+            if e:
+                print(f"Erro:{type(e).__name__}\n")
+
 
     def pick(self):
         title = 'Use as setas para selecionar uma opção:'
@@ -83,22 +115,22 @@ class admin:
         option, index = pick(options, title, indicator='-->', default_index=0)
 
         # print(f"Você escolheu: {option} (Índice {index})")
+        if index:
+            match index:
+                case 0:
+                    self.newuser()
+                case 1:
+                    self.updateuser()
+                case 2:
+                    self.listusers()
+                case 3:
+                    self.delusers()
+                case 4:
+                    print("\n\n\nOperação cancelada")
+                    return True
 
-        match index:
-            case 0:
-                self.saveuser()
-            case 1:
-                self.updateuser()
-            case 2:
-                self.listusers()
-            case 3:
-                self.delusers()
-            case 4:
-                print("\n\n\nOperação cancelada")
-                return True
 
-
-admin = admin()
+admin = Admin()
 while 1:
     n = admin.pick()
     if n:
