@@ -3,6 +3,7 @@ import json
 from pick import pick
 import time
 
+
 class Admin:
     def __init__(self):
         self.users = []
@@ -20,9 +21,9 @@ class Admin:
         nome = input("\nDigite seu nome:\n")
         idade = input("Sua idade:\n")
 
-        #Gera um novo ID com valor crescente em relação ao último usuário cadastrado
+        # Gera um novo ID com valor crescente em relação ao último usuário cadastrado
         if os.path.getsize("datausers.json") > 0:
-            id = max(user["id"] for user in self.users) + 1 
+            id = max(user["id"] for user in self.users) + 1
         else:
             id = 0
 
@@ -34,11 +35,12 @@ class Admin:
 
         self.users.append(data)
         self.savefile(self.users, "save")
-      
+
     def updateuser(self):
         if os.path.getsize("datausers.json") > 0:
             title = 'Qual usuário quer mudar?'
-            users = [(f"ID:{i['id']} | Nome:{i['nome']} | Idade:{i['idade']}") for i in self.users]
+            users = [(f"ID:{i['id']} | Nome:{i['nome']} | Idade:{i['idade']}")
+                     for i in self.users]
         else:
             print("\nNão há usuários cadastrados ainda\n")
             quit()
@@ -46,8 +48,10 @@ class Admin:
         user, index = pick(users, title, indicator='>>>', default_index=0)
 
         titlealt = 'Escolha a alteração:'
-        param = [(f"Nome:{self.users[index]['nome']}"), (f"Idade:{self.users[index]['idade']}"), 'Cancelar']
-        useralt, indexalt = pick(param, titlealt, indicator='>>>', default_index=0)
+        param = [(f"Nome:{self.users[index]['nome']}"),
+                 (f"Idade:{self.users[index]['idade']}"), 'Cancelar']
+        useralt, indexalt = pick(
+            param, titlealt, indicator='>>>', default_index=0)
 
         match indexalt:
             case 0:
@@ -65,11 +69,11 @@ class Admin:
                 quit()
         self.savefile(self.users, "update")
 
-
     def delusers(self):
         if os.path.getsize("datausers.json") > 0:
             title = 'Qual usuário quer DELETAR?'
-            users = [(f"ID:{i['id']} | Nome:{i['nome']} | Idade:{i['idade']}") for i in self.users]
+            users = [(f"ID:{i['id']} | Nome:{i['nome']} | Idade:{i['idade']}")
+                     for i in self.users]
         else:
             print("\nNão há usuários cadastrados ainda\n")
             quit()
@@ -78,18 +82,16 @@ class Admin:
         self.users.pop(index)
         self.savefile(self.users, "delete")
 
-
-
     def listusers(self):
         if os.path.exists("datausers.json") and os.path.getsize("datausers.json") > 0:
             for index, user in enumerate(self.users):
-                print(f"ID:{index} | Nome:{user['nome']} | Idade:{user['idade']}")        
-                input("\nPressione Enter para voltar...")
+                print(
+                    f"ID:{index} | Nome:{user['nome']} | Idade:{user['idade']}")
         else:
             print("Ainda nao existem usuários cadastrados")
-            input("\nPressione Enter para voltar...")
+            time.sleep(5)
 
-    def savefile(self, dict, method):  #Função própria para salvar no arquivo .json
+    def savefile(self, dict, method):  # Função própria para salvar no arquivo .json
         try:
             with open("datausers.json", 'w', encoding="Utf-8") as file:
                 json.dump(dict, file, indent=4, ensure_ascii=False)
@@ -102,10 +104,9 @@ class Admin:
                     print("\n\n\nNão foi possível atualizar usuário")
                 case "delete":
                     print("\n\n\nNão foi possível deletar usuário")
-            
+
             if e:
                 print(f"Erro:{type(e).__name__}\n")
-
 
     def pick(self):
         title = 'Use as setas para selecionar uma opção:'
