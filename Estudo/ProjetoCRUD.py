@@ -82,14 +82,15 @@ class Admin:
         self.users.pop(index)
         self.savefile(self.users, "delete")
 
-    def listusers(self):
+   f listusers(self):
         if os.path.exists("datausers.json") and os.path.getsize("datausers.json") > 0:
             for index, user in enumerate(self.users):
                 print(
                     f"ID:{index} | Nome:{user['nome']} | Idade:{user['idade']}")
+                input("\nPressione ENTER para continuar")
         else:
             print("Ainda nao existem usuários cadastrados")
-            time.sleep(5)
+            input("\nPressione ENTER para continuar")
 
     def savefile(self, dict, method):  # Função própria para salvar no arquivo .json
         try:
