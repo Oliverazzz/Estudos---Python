@@ -1,1 +1,0 @@
-#SQL exercise 1
